@@ -49,6 +49,10 @@ function displayWeather(data) {
     const weatherResult = document.querySelector('.weatherResult');
     const condition = data.weather[0].description.toLowerCase();
     setBackground(condition);
+    const favicon = document.getElementById('favicon');
+    const iconCode = data.weather[0].icon;
+    favicon.href = `https://openweathermap.org/img/wn/${iconCode}.png`;
+
     weatherResult.innerHTML = `
         <h2>Weather in ${data.name}</h2>
         <p>Temperature: ${data.main.temp} °C</p>
