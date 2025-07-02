@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Validator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="conatiner">
         <div class="passwordContainer">
@@ -13,20 +17,23 @@
             <form id="passwordForm">
                 <label for="password">Enter Password:</label>
                 <input type="password" id="password" name="password" required>
-                <button type="submit">Validate</button>
+                <button type="submit" id="button">Validate</button>
             </form>
             <div id="result"></div>
             <div class="password_criteria">
                 <ul>
-                    <li>At least 8 characters</li>
-                    <li>One uppercase letter</li>
-                    <li>One lowercase letter</li>
-                    <li>One number</li>
-                    <li>One special character (!@#$...)</li>
+                    <li id="length">✔️ At least 8 characters</li>
+                    <li id="uppercase">✔️ One uppercase letter</li>
+                    <li id="lowercase">✔️ One lowercase letter</li>
+                    <li id="number">✔️ One number</li>
+                    <li id="special">✔️ One special character (!@#$...)</li>
                 </ul>
             </div>
+            <div id="strength"></div>
+
         </div>
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
