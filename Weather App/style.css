@@ -1,28 +1,125 @@
-*{
+/* Global Reset */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
 }
-body{
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+
+/* Page Background */
+body {
+    background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
     height: 100vh;
-    width: 100vw;
-    background-color: black;
-}
-.weather{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-.weatherContainer{
-    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    border-radius: 10px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Main Container */
+.weatherContainer {
+    background: rgba(255, 255, 255, 0.15);
+    /* semi-transparent white */
+    border-radius: 20px;
+    padding: 30px 40px;
+    backdrop-filter: blur(10px);
+    /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    /* Optional: Makes text visible on dark backgrounds */
+    max-width: 400px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+
+/* Input Section */
+.input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.input input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 2px solid #0072ff;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+}
+
+.input button {
+    padding: 10px 20px;
+    background-color: #0072ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input button:hover {
+    background-color: #005fd4;
+}
+
+/* Weather Result */
+.weatherResult {
+    text-align: center;
+}
+
+.weatherResult h2 {
+    margin-bottom: 10px;
+    color: #0072ff;
+    font-size: 24px;
+}
+
+.weatherResult p {
+    margin: 6px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.weatherResult img {
+    margin-top: 10px;
+    width: 100px;
+}
+
+.glass-loader {
+  display: none;
+  position: relative;
+  margin: 20px auto;
+  padding: 20px;
+  width: 180px;
+  text-align: center;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+  color: #fff;
+  font-family: sans-serif;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.glass-loader .spinner {
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  border-top: 5px solid #00c6ff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 10px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
 }
