@@ -1,0 +1,108 @@
+/* Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f3e9dc, #d8c3a5);
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.box {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px 40px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+.quoteContainer h1 {
+    font-size: 28px;
+    color: #5c3d2e;
+    margin-bottom: 25px;
+}
+
+#quoteText {
+    font-size: 22px;
+    color: #3a2e2e;
+    margin-bottom: 15px;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+#quoteAuthor {
+    font-size: 18px;
+    color: #7e6b5a;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+#newQuoteButton {
+    padding: 10px 25px;
+    font-size: 16px;
+    background-color: #5c3d2e;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    transition: background 0.3s ease;
+}
+
+#newQuoteButton:hover {
+    background-color: #3d281e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .box {
+        padding: 25px 20px;
+    }
+
+    .quoteContainer h1 {
+        font-size: 22px;
+    }
+
+    #quoteText {
+        font-size: 18px;
+    }
+
+    #quoteAuthor {
+        font-size: 16px;
+    }
+
+    #newQuoteButton {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .box {
+        width: 95%;
+        padding: 20px 15px;
+    }
+
+    .quoteContainer h1 {
+        font-size: 20px;
+    }
+
+    #quoteText {
+        font-size: 16px;
+    }
+
+    #quoteAuthor {
+        font-size: 14px;
+    }
+
+    #newQuoteButton {
+        font-size: 13px;
+        padding: 8px 16px;
+    }
+}
