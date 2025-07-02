@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.qrContainer {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: rgba(255,255,255,0.2);
+    color: white;
+}
+
+button {
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #00ffcc;
+    color: #000;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #00bfa6;
+}
+
+#qrCode {
+    margin-top: 1.5rem;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+

@@ -1,6 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     generateQRCode();
+
+    // Restore last QR code if exists
+    const lastQRCode = localStorage.getItem('lastQRCode');
+    if (lastQRCode) {
+        displayQRCode(lastQRCode);
+    }
 });
+
 function generateQRCode() {
     const button = document.getElementById('generateBtn');
     button.addEventListener('click',() => {
@@ -29,4 +36,6 @@ function displayQRCode(apiUrl) {
     let qrCode = document.getElementById('qrCode');
     qrCode.innerHTML = `<img src="${apiUrl}" alt="QR Code">`;
     qrCode.style.display = 'block';
+    localStorage.setItem('lastQRCode', apiUrl);
+
 }
