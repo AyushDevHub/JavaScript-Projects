@@ -70,50 +70,40 @@
             </aside>
             <div class="player-list">
                 <h2>Popular Artists</h2>
-                <div class="artist-grid">
-                    <div class="artist-card">
-                        <div class="artist-img-wrapper">
-                            <img src="https://i.scdn.co/image/ab67616100005174c40600e02356cc86f0debe84" alt="Pritam">
+                <div id="songList" class="grid-artists"></div>
+            </div>
+
+            <aside>
+                <div class="player">
+                    <div class="player__track">
+                        <div class="player__track-img">
+                            <img id="track-img" src="" alt="">
                         </div>
-                        <h4>Atif Aslam</h4>
-                        <p>Artist</p>
+                        <div class="player__track-info">
+                            <h3 id="track-title">Title</h3>
+                            <p id="track-artist">Artist</p>
+                        </div>
                     </div>
-                    <div class="artist-card">
-                        <div class="artist-img-wrapper">
-                            <img src="https://i.scdn.co/image/ab67616100005174fb13d10be20fdcb5a670f551" alt="Pritam">
-                        </div>
-                        <h4>Vishal Mishra</h4>
-                        <p>Artist</p>
+                    <div class="player__controls">
+                        <i id="prevBtn" class='bx bx-skip-previous'></i>
+                        <i id="playPauseBtn" class='bx bx-play'></i>
+                        <i id="nextBtn" class='bx bx-skip-next'></i>
                     </div>
-                    <div class="artist-card">
-                        <div class="artist-img-wrapper">
-                            <img src="https://i.scdn.co/image/ab67616100005174b19af0ea736c6228d6eb539c" alt="Pritam">
+                    <div class="player__progress">
+                        <span id="current-time">0:00</span>
+                        <div class="progress-container">
+                            <div class="progress-bar"></div>
                         </div>
-                        <h4>A.R. Rahman</h4>
-                        <p>Artist</p>
-                    </div>
-                    <div class="artist-card">
-                        <div class="artist-img-wrapper">
-                            <img src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca" alt="Pritam">
-                        </div>
-                        <h4>Pritam</h4>
-                        <p>Artist</p>
-                    </div>
-                    <div class="artist-card">
-                        <div class="artist-img-wrapper">
-                            <img src="https://i.scdn.co/image/ab676161000051740261696c5df3be99da6ed3f3"
-                                alt="Arijit Singh">
-                        </div>
-                        <h4>Arijit Singh</h4>
-                        <p>Artist</p>
+                        <span id="duration">0:00</span>
                     </div>
                 </div>
-                <!-- Repeat artist-card as needed -->
-            </div>
-        </div>
+                <audio id="audioPlayer"></audio>
+
+            </aside>
 
         </div>
     </main>
+    <script src="script.js"></script>
 </body>
 
 </html>

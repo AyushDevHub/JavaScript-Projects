@@ -12,7 +12,7 @@ body {
 .navbar {
     display: flex;
     align-items: center;
-    padding: 1rem 2rem;
+    /* padding: 1rem 2rem; */
     justify-content: space-between;
     align-items: center;
 }
@@ -144,6 +144,15 @@ body {
     padding: 2rem;
 }
 
+.grid-artists{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    flex-direction: row;
+    margin-top: 3rem;
+
+}
+
 .artist-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -192,4 +201,107 @@ body {
 .artist-card p {
     font-size: 0.85rem;
     color: #888;
+}
+
+.player {
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    border-radius: 20px;
+    padding: 20px 30px;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    flex-wrap: wrap;
+}
+
+/* Track Details */
+.player__track {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.player__track-img img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.player__track-img img.spinning {
+    animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.player__track-info h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.player__track-info p {
+    font-size: 0.85rem;
+    color: #aaa;
+    margin: 3px 0 0;
+}
+
+/* Controls */
+.player__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 25px;
+    font-size: 1.6rem;
+}
+
+.player__controls i {
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.player__controls i:hover {
+    color: #1DB954;
+    transform: scale(1.2);
+}
+
+.player__progress {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    color: white;
+    font-size: 14px;
+}
+
+.progress-container {
+    flex: 1;
+    height: 6px;
+    background: #444;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: #1db954;
+    transition: width 0.2s;
 }
